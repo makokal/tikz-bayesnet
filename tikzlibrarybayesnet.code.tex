@@ -17,10 +17,12 @@
 \usetikzlibrary{arrows}
 
 % Latent node
-\tikzstyle{latent} = [circle,fill=white,draw=black,inner sep=1pt,
-minimum size=20pt, font=\fontsize{10}{10}\selectfont, node distance=1]
+\tikzstyle{latent} = [circle,fill=white,draw=red,very thick,inner sep=1pt,
+minimum size=24pt, font=\fontsize{10}{10}\selectfont, node distance=1]
+% \tikzstyle{latent} = [circle,fill=white,draw=black,inner sep=1pt,
+% minimum size=20pt, font=\fontsize{10}{10}\selectfont, node distance=1]
 % Observed node
-\tikzstyle{obs} = [latent,fill=gray!25]
+\tikzstyle{obs} = [latent,draw=blue,fill=blue!10]
 % Constant node
 \tikzstyle{const} = [rectangle, inner sep=0pt, node distance=1]
 % Factor node
@@ -71,6 +73,16 @@ below left=5pt and 0pt of #1.south east] %
     } ;
   } ;
 }
+
+% \edge [options] {inputs} {outputs}
+% \newcommand{\latentedge}[3][]{ %
+%   % Connect all nodes #2 to all nodes #3.
+%   \foreach \x in {#2} { %
+%     \foreach \y in {#3} { %
+%       \draw[->,#1] (\x) -- (\y) ;%
+%     } ;
+%   } ;
+% }
 
 % \factor [options] {name} {caption} {inputs} {outputs}
 \newcommand{\factor}[5][]{ %
