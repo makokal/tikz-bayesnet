@@ -17,10 +17,24 @@
 \usetikzlibrary{arrows}
 
 % Latent node
-\tikzstyle{latent} = [circle,fill=white,draw=red,very thick,inner sep=1pt,
+\tikzstyle{latent} = [circle,fill=white,draw=blue,very thick,inner sep=1pt,
 minimum size=24pt, font=\fontsize{10}{10}\selectfont, node distance=1]
 % \tikzstyle{latent} = [circle,fill=white,draw=black,inner sep=1pt,
 % minimum size=20pt, font=\fontsize{10}{10}\selectfont, node distance=1]
+
+% Decision node
+\tikzstyle{decision} = [rectangle,fill=white,draw=blue,very thick,inner sep=1pt,
+minimum size=24pt, font=\fontsize{10}{10}\selectfont, node distance=1]
+
+% Uncertainty node
+\tikzstyle{uncertainty} = [circle,fill=white,draw=blue,very thick,inner sep=1pt,
+minimum size=24pt, font=\fontsize{10}{10}\selectfont, node distance=1]
+
+% Utility/Value node
+\tikzstyle{utility} = [diamond,fill=white,draw=blue,very thick,inner sep=1pt,
+minimum size=24pt, font=\fontsize{10}{10}\selectfont, node distance=1]
+
+
 % Observed node
 \tikzstyle{obs} = [latent,draw=blue,fill=blue!10]
 % Constant node
@@ -32,7 +46,7 @@ sep=0pt, node distance=0.4]
 \tikzstyle{det} = [latent, diamond]
 
 % Plate node
-\tikzstyle{plate} = [draw, rectangle, rounded corners, fit=#1]
+\tikzstyle{plate} = [draw, thick, rectangle, rounded corners, fit=#1]
 % Invisible wrapper node
 \tikzstyle{wrap} = [inner sep=0pt, fit=#1]
 % Gate
@@ -149,4 +163,10 @@ below left=5pt and 0pt of #1.south east] %
     \draw [-*,thick] (\x) -- (#1); %
   } ;%
 }
+
+
+\tikzset{packet/.style={rectangle, draw, very thick,
+        minimum size=8mm, rounded corners=1mm,
+        fill=blue!30!blue!30, drop shadow}}
+
 
